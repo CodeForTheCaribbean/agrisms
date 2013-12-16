@@ -24,9 +24,9 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'rapid',                      
-        'USER': 'rapid',
-        'PASSWORD': 'rapid',
+        'NAME': 'smsdb',
+        'USER': 'smsuser',
+        'PASSWORD': 'smspass',
         'HOST': 'localhost'
     }
 }
