@@ -1,4 +1,4 @@
-from rapidsms.contrib.handlers import KeywordHandler
+from rapidsms.contrib.handlers import KeywordHandler, PatternHandler
 
 help_text = {
     'aaa': 'Help for aaa',
@@ -28,3 +28,13 @@ class HelpHandler(KeywordHandler):
             self.respond(help_text['ccc'])
         else:
             self.help()
+
+class SumHandler(PatternHandler):
+    pattern = r'^(\d+) plus (\d+)$'
+
+    def handle(self, a,b ):
+        a, b = int(a), int(b)
+        total = a + b
+
+        self.respond(
+            "%d+%d = %d" % (a, b, total))

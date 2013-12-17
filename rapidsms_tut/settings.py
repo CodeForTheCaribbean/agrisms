@@ -220,5 +220,6 @@ LOGIN_REDIRECT_URL = '/'
 RAPIDSMS_HANDLERS = (
     #'rapidsms.contrib.echo.handlers.echo.EchoHandler',
     'tut.myhandlers.HelpHandler',
+    'tut.myhandlers.SumHandler',
     #'rapidsms.contrib.echo.handlers.ping.PingHandler',
 )
