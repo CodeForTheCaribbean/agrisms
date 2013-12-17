@@ -205,6 +205,7 @@ INSTALLED_APPS = (
 
 #    "rapidsms.contrib.echo",
     "tut",
+    "voting",
 
     "rapidsms.contrib.default",  # Must be last
 )
@@ -221,5 +222,7 @@ RAPIDSMS_HANDLERS = (
     #'rapidsms.contrib.echo.handlers.echo.EchoHandler',
     'tut.myhandlers.HelpHandler',
     'tut.myhandlers.SumHandler',
+    'voting.handlers.ResultsHandler',
+    'voting.handlers.VoteHandler',
     #'rapidsms.contrib.echo.handlers.ping.PingHandler',
 )
