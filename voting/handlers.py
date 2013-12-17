@@ -44,4 +44,3 @@ class VoteHandler(KeywordHandler):
       #count the vote, use update to do it in a single query
       Choice.objects.filter(name__iexact=text).update(votes=F('votes')+1)
       self.respond("Your vote for %s has been counted " % text)
-
