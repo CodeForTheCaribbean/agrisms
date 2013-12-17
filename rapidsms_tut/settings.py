@@ -193,6 +193,7 @@ INSTALLED_APPS = (
     "django_tables2",
     "selectable",
     "south",
+    "rapidsms.contrib.handlers",
     # RapidSMS
     "rapidsms",
     "rapidsms.backends.database",
@@ -204,7 +205,7 @@ INSTALLED_APPS = (
 
 #    "rapidsms.contrib.echo",
     "tut",
-    "rapidsms.contrib.handlers",
+
     "rapidsms.contrib.default",  # Must be last
 )
 
@@ -217,7 +218,7 @@ INSTALLED_BACKENDS = {
 LOGIN_REDIRECT_URL = '/'
 
 RAPIDSMS_HANDLERS = (
-    "myhandlers.HelpHandler",
-    'rapidsms.contrib.echo.handlers.echo.EchoHandler',
-    'rapidsms.contrib.echo.handlers.ping.PingHandler',
+    #'rapidsms.contrib.echo.handlers.echo.EchoHandler',
+    'tut.myhandlers.HelpHandler',
+    #'rapidsms.contrib.echo.handlers.ping.PingHandler',
 )
