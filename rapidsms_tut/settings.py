@@ -202,7 +202,9 @@ INSTALLED_APPS = (
     "rapidsms.contrib.messaging",
     "rapidsms.contrib.registration",
 #    "rapidsms.contrib.echo",
+    "rapidsms-envaya",
     "tut",
+    "voting",
     "rapidsms.contrib.default",  # Must be last
 )
 
@@ -210,6 +212,14 @@ INSTALLED_BACKENDS = {
     "message_tester": {
         "ENGINE": "rapidsms.backends.database.DatabaseBackend",
     },
+
+    'envayasms': {
+        "ENGINE": "rapidsms-envaya.backend",
+        'port': 8880, # feel free to change the port
+        'password': None, # set to a string to set the password
+        'url': 'http://10.0.2.2:8880/', # important: this must exactly match what is entered in your Android phone
+        'max_delay': None
+    }
 }
 
 LOGIN_REDIRECT_URL = '/'
@@ -217,4 +227,8 @@ LOGIN_REDIRECT_URL = '/'
 RAPIDSMS_HANDLERS = (
 #    'rapidsms.contrib.echo.handlers.echo.EchoHandler',
 #    'rapidsms.contrib.echo.handlers.ping.PingHandler',
+    "tut.myhandlers.HelpHandler",
+    "tut.myhandlers.SumHandler",
+    "voting.handlers.ResultsHandler",
+    "voting.handlers.VoteHandler",
 )
