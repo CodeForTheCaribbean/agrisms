@@ -232,3 +232,5 @@ RAPIDSMS_HANDLERS = (
     "voting.handlers.ResultsHandler",
     "voting.handlers.VoteHandler",
 )
+import dj_database_url
+DATABASES = {'default': dj_database_url.config(default='postgres://rapid:rapid@localhost:5432/rapid')}
