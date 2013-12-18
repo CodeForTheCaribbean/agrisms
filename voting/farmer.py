@@ -14,7 +14,12 @@ class FindHandler(KeywordHandler):
     text = text.strip().lower()
     data_type = 'http://localhost:3500/farmers/' + text
     data = json.load(urllib2.urlopen(data_type))
-    name = data['first_name']
+
+    first_name = data['first_name']
+    last_name = data['last_name']
+
+    name = "Farmer Name: %s %s" % (first_name,last_name)
+
     self.respond(name)
 
 
