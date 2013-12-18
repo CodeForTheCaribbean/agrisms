@@ -225,5 +225,6 @@ RAPIDSMS_HANDLERS = (
     'voting.handlers.ResultsHandler',
     'voting.handlers.VoteHandler',
     'voting.farmer.FindHandler',
+    'voting.farmer.FindCropHandler',
     #'rapidsms.contrib.echo.handlers.ping.PingHandler',
 )

@@ -23,17 +23,16 @@ class FindHandler(KeywordHandler):
     self.respond(name)
 
 
-# class FindCropHandler(KeywordHandler):
- #keyword = "find c"
+class FindCropHandler(KeywordHandler):
+  keyword = "crop"
 
-  #def help(self):
-#    self.respond("Valid comment: Find C: [Farm_ID]")
+  def help(self):
+    self.respond("Valid comment: Find C: [Farm_ID]")
 
- # def handle(self, text):
-  #  text = text.strip().lower()
-   # data_type = 'http://localhost:3500/crops/?farm_id=' + text
-    #data = json.load(urllib2.urlopen(data_type))
-    #name = data
+  def handle(self, text):
+    text = text.strip().lower()
+    data_type = 'http://localhost:3500/farm/' + text
+    data = json.load(urllib2.urlopen(data_type))
 
 
 
